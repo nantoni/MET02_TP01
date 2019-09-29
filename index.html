@@ -2,41 +2,129 @@
 <html lang="fr">
 
 <head>
+    <title>METH02_TP01</title>
 
     <meta charset="UTF-8">
 
-    <!--Import Google Icon Font-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <link rel="stylesheet" href="css/style.css">
 
-    <title>METH02_TP01</title>
+    <!-- Materialize minified css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet/less" type="text/css" href="css/style.less" />
 </head>
 
 <body>
 
-    <form action="#" method="get" class="form-example">
-        <div class="form-example">
-            <label for="name">Enter your name: </label>
-            <input type="text" name="name" id="name" required>
+    <header>
+        <div class="row container">
+            <h1 class="col s8 offset-s2">METH02 TP01</h1>
         </div>
-        <div class="form-example">
-            <label for="email">Enter your email: </label>
-            <input type="email" name="email" id="email" required>
-        </div>
-        <div class="form-example">
-            <input type="submit" value="Subscribe!">
-        </div>
-    </form>
+    </header>
 
+    <div class="container">
+        <div class="row">
+            <div class="col s8 offset-s2">
+                <h2>Saisie compte client</h2>
+            </div>
+            <form class="col s8 offset-s2">
+                <!-- Login -->
+                <div class="input-field col s6">
+                    <label>Login</label>
+                    <input type="text" name="login" id="login" />
+                </div>
+                <!-- Password -->
+                <div class="input-field col s6">
+                    <label>Mot de passe</label>
+                    <input type="password" name="password" id="password" />
+                </div>
+                <!-- Civilite -->
+                <div class="input-field col s12">
+                    <p>
+                        <label>
+                            <input name="groupCivilite" type="radio" />
+                            <span>Homme</span>
+                        </label>
+                        <label>
+                            <input name="groupCivilite" type="radio" />
+                            <span>Femme</span>
+                        </label>
+                        <label>
+                            <input name="groupCivilite" type="radio" />
+                            <span>Non-binaire</span>
+                        </label>
+                    </p>
+                    <div class="form-group">
+                        <label for="nonBinaryDistrib">Distribution de la non-binarité : </label>
+                        <label>Homme</label>
+                        <input type="range" class="form-control-range" id="nonBinaryDistrib">
+                        <label>Femme</label>
+                    </div>
+                </div>
+                <!-- Nom -->
+                <div class="input-field col s6">
+                    <label>Nom</label>
+                    <input type="text" name="nom" id="nom" />
+                </div>
+                <!-- Prenom -->
+                <div class="input-field col s6">
+                    <label>Prenom</label>
+                    <input type="text" name="prenom" id="prenom" />
+                </div>
+                <!-- Email -->
+                <div class="input-field col s12">
+                    <label>Email</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <!-- Telephone -->
+                <div class="input-field col s12">
+                    <label>Telephone</label>
+                    <input type="tel" name="tel" id="tel" />
+                </div>
+                <!-- Adresse -->
+                <div class="input-field col s12">
+                    <label>Adresse</label>
+                    <input type="text" name="adresse" id="adresse" />
+                </div>
+                <!-- Code Postal  -->
+                <div class="input-field col s6">
+                    <label>Code Postal</label>
+                    <input type="text" name="cp" id="cp" />
+                </div>
+                <!-- Ville  -->
+                <div class="input-field col s6">
+                    <label>Ville</label>
+                    <input type="text" name="ville" id="ville" />
+                </div>
 
-    <!-- Compiled and minified Materialize -->
+                <div class="col">
+                    <progress id="avancement" value="50" max="100"></progress>
+                </div>
+                <!-- Submit -->
+                <div class="input_field col s12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer <i
+                            class="material-icons">send</i></button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <footer class="container">
+        <p>Nathan ANTONI </p>
+    </footer>
+
+    <!-- JavaScript files -->
+
+    <!-- Materialize minified JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- JQuery minified js -->
     <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
 </body>
 
