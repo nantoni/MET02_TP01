@@ -20,95 +20,96 @@
 
     <header>
         <div class="row container">
-            <h1 class="col s8 offset-s2">METH02 TP01</h1>
+            <h1 class="col s6 offset-s3">METH02 TP01</h1>
         </div>
     </header>
 
+
     <div class="container">
-        <div class="row">
-            <div class="col s8 offset-s2">
-                <h2>Saisie compte client</h2>
-            </div>
-            <form class="col s8 offset-s2">
-                <!-- Login -->
-                <div class="input-field col s6">
-                    <label>Login</label>
-                    <input type="text" name="login" id="login" />
-                </div>
-                <!-- Password -->
-                <div class="input-field col s6">
-                    <label>Mot de passe</label>
-                    <input type="password" name="password" id="password" />
-                </div>
-                <!-- Civilite -->
-                <div class="input-field col s12">
-                    <p>
-                        <label>
-                            <input name="groupCivilite" type="radio" />
-                            <span>Homme</span>
-                        </label>
-                        <label>
-                            <input name="groupCivilite" type="radio" />
-                            <span>Femme</span>
-                        </label>
-                        <label>
-                            <input name="groupCivilite" type="radio" />
-                            <span>Non-binaire</span>
-                        </label>
-                    </p>
-                    <div class="form-group">
-                        <label for="nonBinaryDistrib">Distribution de la non-binarité : </label>
-                        <label>Homme</label>
-                        <input type="range" class="form-control-range" id="nonBinaryDistrib">
-                        <label>Femme</label>
+        <div class="card">
+            <div class="row">
+                <form class="col s8 offset-s2">
+                    <h2>Saisie compte client</h2>
+                    <!-- Login -->
+                    <div class="input-field col s6">
+                        <label>Login</label>
+                        <input autofocus type="text" name="login" id="login" />
                     </div>
-                </div>
-                <!-- Nom -->
-                <div class="input-field col s6">
-                    <label>Nom</label>
-                    <input type="text" name="nom" id="nom" />
-                </div>
-                <!-- Prenom -->
-                <div class="input-field col s6">
-                    <label>Prenom</label>
-                    <input type="text" name="prenom" id="prenom" />
-                </div>
-                <!-- Email -->
-                <div class="input-field col s12">
-                    <label>Email</label>
-                    <input type="email" name="email" id="email" />
-                </div>
-                <!-- Telephone -->
-                <div class="input-field col s12">
-                    <label>Telephone</label>
-                    <input type="tel" name="tel" id="tel" />
-                </div>
-                <!-- Adresse -->
-                <div class="input-field col s12">
-                    <label>Adresse</label>
-                    <input type="text" name="adresse" id="adresse" />
-                </div>
-                <!-- Code Postal  -->
-                <div class="input-field col s6">
-                    <label>Code Postal</label>
-                    <input type="text" name="cp" id="cp" />
-                </div>
-                <!-- Ville  -->
-                <div class="input-field col s6">
-                    <label>Ville</label>
-                    <input type="text" name="ville" id="ville" />
-                </div>
+                    <!-- Password -->
+                    <div class="input-field col s6">
+                        <label>Mot de passe</label>
+                        <input type="password" name="pass" id="pass" />
+                    </div>
+                    <!-- Civilite -->
+                    <div class="input-field col s12">
+                        <div>
+                            <label>
+                                <input name="groupCivilite" type="radio" />
+                                <span>Homme</span>
+                            </label>
+                            <label>
+                                <input name="groupCivilite" type="radio" />
+                                <span>Femme</span>
+                            </label>
+                            <label>
+                                <input name="groupCivilite" type="radio" />
+                                <span>Non-binaire</span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <p class="greyed">Distribution de la non-binarité : </p>
+                            <label class="col s2">Homme</label>
+                            <input class="col s8" type="range" class="form-control-range" id="nonBinaryDistrib">
+                            <label class="col s2">Femme</label>
+                        </div>
+                    </div>
+                    <!-- Nom -->
+                    <div class="input-field col s6">
+                        <label>Nom</label>
+                        <input type="text" name="nom" id="nom" />
+                    </div>
+                    <!-- Prenom -->
+                    <div class="input-field col s6">
+                        <label>Prenom</label>
+                        <input type="text" name="prenom" id="prenom" />
+                    </div>
+                    <!-- Email -->
+                    <div class="input-field col s12">
+                        <label>Email</label>
+                        <input type="email" name="email" id="email" />
+                    </div>
+                    <!-- Telephone -->
+                    <div class="input-field col s12">
+                        <label>Telephone</label>
+                        <input type="tel" name="tel" id="tel" />
+                    </div>
+                    <!-- Adresse -->
+                    <div class="input-field col s12">
+                        <label>Adresse</label>
+                        <input type="text" name="adresse" id="adresse" />
+                    </div>
+                    <!-- Code Postal  -->
+                    <div class="input-field col s6">
+                        <label>Code Postal</label>
+                        <input type="text" name="cp" id="cp" />
+                    </div>
+                    <!-- Ville  -->
+                    <div class="input-field col s6">
+                        <label>Ville</label>
+                        <input type="text" name="ville" id="ville" />
+                    </div>
 
-                <div class="col">
-                    <progress id="avancement" value="50" max="100"></progress>
-                </div>
-                <!-- Submit -->
-                <div class="input_field col s12">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer <i
-                            class="material-icons">send</i></button>
-                </div>
+                    <div class="col">
+                        <progress id="avancement" value="50" max="100"></progress>
+                    </div>
+                    <!-- Submit -->
+                    <div class="input_field col s12">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer <i
+                                class="material-icons">send</i></button>
+                    </div>
 
-            </form>
+                </form>
+            </div>
         </div>
     </div>
 
@@ -125,6 +126,10 @@
     <script src="js/jquery-3.4.1.min.js"></script>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
+
+
+    <script src="js/validate.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
