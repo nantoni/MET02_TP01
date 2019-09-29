@@ -3,16 +3,16 @@
 
 <head>
     <title>METH02_TP01</title>
-
     <meta charset="UTF-8">
 
-    <link rel="stylesheet" href="css/style.css">
 
     <!-- Materialize minified css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
+    <!-- Materialize icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+    <!-- LESS external stylesheet -->
     <link rel="stylesheet/less" type="text/css" href="css/style.less" />
 </head>
 
@@ -28,10 +28,10 @@
     <div class="container">
         <div class="card">
             <div class="row">
-                <form class="col s8 offset-s2">
+                <form id="compteForm" method="POST" class="col s8 offset-s2">
                     <h2>Saisie compte client</h2>
                     <!-- Login -->
-                    <div class="input-field col s6">
+                    <div class="input-field col s12">
                         <label>Login</label>
                         <input autofocus type="text" name="login" id="login" />
                     </div>
@@ -39,6 +39,11 @@
                     <div class="input-field col s6">
                         <label>Mot de passe</label>
                         <input type="password" name="pass" id="pass" />
+                        <span id="errorPass" class="helper-text">Les mots de passe de correspondent pas</span>
+                    </div>
+                    <div class="input-field col s6">
+                        <label>Confirmation</label>
+                        <input type="password" name="passconfirm" id="passconfirm" />
                     </div>
                     <!-- Civilite -->
                     <div class="input-field col s12">
@@ -56,12 +61,6 @@
                                 <span>Non-binaire</span>
                             </label>
                         </div>
-                        <div class="form-group">
-                            <p class="greyed">Distribution de la non-binarité : </p>
-                            <label class="col s2">Homme</label>
-                            <input class="col s8" type="range" class="form-control-range" id="nonBinaryDistrib">
-                            <label class="col s2">Femme</label>
-                        </div>
                     </div>
                     <!-- Nom -->
                     <div class="input-field col s6">
@@ -75,13 +74,15 @@
                     </div>
                     <!-- Email -->
                     <div class="input-field col s12">
-                        <label>Email</label>
-                        <input type="email" name="email" id="email" />
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
                     </div>
                     <!-- Telephone -->
                     <div class="input-field col s12">
                         <label>Telephone</label>
-                        <input type="tel" name="tel" id="tel" />
+                        <input type="tel" name="tel" id="tel" 
+                        />
+                        <span id="errorTel" class="helper-text">Ce numéro n'est pas correct</span>
                     </div>
                     <!-- Adresse -->
                     <div class="input-field col s12">
@@ -92,15 +93,12 @@
                     <div class="input-field col s6">
                         <label>Code Postal</label>
                         <input type="text" name="cp" id="cp" />
+                        <span id="errorCp" class="helper-text">Ce code postal n'est pas correct</span>
                     </div>
                     <!-- Ville  -->
                     <div class="input-field col s6">
                         <label>Ville</label>
                         <input type="text" name="ville" id="ville" />
-                    </div>
-
-                    <div class="col">
-                        <progress id="avancement" value="50" max="100"></progress>
                     </div>
                     <!-- Submit -->
                     <div class="input_field col s12">
@@ -125,11 +123,11 @@
     <!-- JQuery minified js -->
     <script src="js/jquery-3.4.1.min.js"></script>
 
+    <!-- LESS js -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>
 
 
     <script src="js/validate.js"></script>
-    <script src="js/script.js"></script>
 
 </body>
 
